@@ -1,2 +1,4 @@
 * text=auto
 *.sol linguist-language=Solidity
+web3j-function-library.js = Web3j
+ipfs-function-library.js = IPFS
