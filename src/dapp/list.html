@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Decentralized Blockchain Publishing Platform</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        .row.content {height: 1500px}
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {height: auto;}
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-3 sidenav">
+            <h4>DRPP - Blockchain Solution
+            </h4>
+            <ul class="nav nav-pills nav-stacked">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Register / Login</a></li>
+                <li><a href="submit.html">Submit Paper</a></li>
+                <li><a href="review.html">Review Paper</a></li>
+                <li class="active"><a href="list.html">View Papers</a></li>
+            </ul><br>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search Blog..">
+                <span class="input-group-btn">
+          <button class="btn btn-default" type="button" onclick="location.href = 'search.html';">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+            </div>
+        </div>
+
+        <div class="col-sm-9">
+            <img src="images/logo_decentralized_publishing_platform.png" width="500px">
+
+            <!-- Current user information Begin -->
+            <h4><small>Total Submitted Papers <span id="total_papers">0</span></small></h4>
+            <h4><small>Current User <span id="wallet">0</span></small></h4>
+            <h4><small><span id="fullname">0</span></small></h4>
+            <h4><small><span id="role">0</span></small></h4>
+            <hr>
+            <!-- Current user information End -->
+
+            <!-- dynamic paper information data Begin -->
+            <div id="list-paperblock">
+            </div>
+            <!-- dynamic paper information data End -->
+
+            <!-- testing IPFS network Start-->
+            <div class="small alert-success">
+                <p><span class="badge">Testing IPFS Network</span> </p>
+
+                <img src="" id="ipfsTestImage"  name="ipfsTestImage" alt="test" width="50px" height="50px"/> <br>
+                    <span id="ipfs_image_msg" class="small alert-success"> if you see the above image then IPFS is working correctly, <br> otherwise make sure to check IPFS daemon is running.</span>
+            </div>
+            <!-- testing IPFS network End-->
+
+        </div>
+    </div>
+</div>
+
+<footer class="container-fluid">
+    <p>blockchainsfalcon.com (C) FarhanKhan - 2020</p>
+</footer>
+
+<!-- loading the minified version of IPFS -->
+<script src="https://unpkg.com/ipfs-http-client@39.0.2/dist/index.min.js" integrity="sha384-DUTAjqwwqxmoFuDozFeVvanWVA8QQBYyGSq4MQOlBxH03rqD4yyaSl43RQHU5E8d" crossorigin="anonymous"></script><!-- loading the human-readable (not minified) version -->
+<script src="https://unpkg.com/ipfs-http-client@39.0.2/dist/index.js" integrity="sha384-SbtgpGuHo4HmMg8ZeX2IrF1c4cDnmBTsW84gipxDCzeFhIZaisgrVQbn3WUQsd0e" crossorigin="anonymous"></script>
+<script src="js_libraries/ipfs-function-library.js" ></script>
+<script src="js_contracts/UsersContract.js" language="JavaScript"></script>
+<script src="js_contracts/PapersContract.js" language="JavaScript"></script>
+<script src="js_contracts/AuthorsContract.js" language="JavaScript"></script>
+<script src="js_contracts/ReviewersContract.js" language="JavaScript"></script>
+<script src="js_libraries/web3j-function-library.js" ></script>
+<script src="list-page-web3.js" ></script>
+
+
+</body>
+</html>

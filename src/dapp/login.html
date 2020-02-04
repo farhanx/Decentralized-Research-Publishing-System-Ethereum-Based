@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Decentralized Blockchain Publishing Platform</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        .row.content {height: 700px}
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {height: auto;}
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-3 sidenav">
+            <h4>DRPP - Blockchain Solution</h4>
+            <ul class="nav nav-pills nav-stacked">
+                <li ><a href="index.html">Home</a></li>
+                <li class="active"><a href="login.html">Register / Login</a></li>
+                <li><a href="submit.html">Submit Paper</a></li>
+                <li><a href="review.html">Review Paper</a></li>
+                <li><a href="list.html">View Papers</a></li>
+            </ul><br>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search Blog..">
+                <span class="input-group-btn">
+          <button class="btn btn-default" type="button" onclick="location.href = 'search.html';">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+            </div>
+        </div>
+
+        <div class="col-sm-9">
+
+            <img src="images/logo_decentralized_publishing_platform.png" width="500px">
+            <h4><small>Registration or Login for DRPP</small></h4>
+            <hr>
+
+            <h2>Register or Login </h2>
+            <h5><span class="glyphicon glyphicon-time"></span> Ethereum network 2019</h5>
+            <h5><span class="label label-danger">Regitser</span> <span class="label label-primary">Login</span></h5><br>
+            <p>To use this service you must register with Decentralized Research Publishing Platform</p>
+
+           <!-- <button id="connectAccount" name="connectAccount"  type="button" class="btn btn-default" onclick="onConnectAccount();">Connect New Account</button> -->
+
+
+            <form class="form-horizontal" action="/action_page.php">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="fullname">Full Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control " id="fullname" placeholder="Enter Full Name" name="fullname">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="role">Register as</label>
+                        <div class="col-sm-10">
+                            <select type="text" class="form-control" id="role" placeholder="Enter Full Name" name="role">
+                              <option value="0">Author</option>
+                              <option value="1">Reviewer</option>
+                                <option value="2">Researcher</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="wallet">Wallet Address</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="wallet" placeholder="Enter Wallet" name="wallet" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10" id="form_buttons">
+                            <button id="register" name="register"  type="button" class="btn btn-default" onclick="onSubmitForm();">Register</button>
+                            <button id="refresh" name="refresh"  type="button" class="btn btn-default" onclick="onRefresh();">Refresh</button>
+                        </div>
+
+                        <div class="col-sm-offset-2 col-sm-10" id="progress-div">
+                            <img src="progress.gif" id="progress-bar">
+                        </div>
+
+
+                    </div>
+                </form>
+            <br>
+            <br>
+
+        </div>
+    </div>
+</div>
+
+<script src="js_contracts/UsersContract.js" language="JavaScript"></script>
+<script src="js_libraries/web3j-function-library.js" ></script>
+<script src="login-page-initializer.js" language="JavaScript"></script>
+
+
+<footer class="container-fluid">
+    <p>blockchainsfalcon.com (C) FarhanKhan - 2020</p>
+</footer>
+
+</body>
+</html>
