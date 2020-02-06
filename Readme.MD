@@ -229,3 +229,6 @@ to be monitored, including pending and successful in synchronizing the page refr
 3 - The search bar is currently not working; this search bar will be used to find papers.
 
 4 - Reviewer will add their interest in their profile, so they can see those papers easily, which are relevant to their interest.
+
+5 - Security patterns and restrictions for all smart contracts.
+
