@@ -50,6 +50,8 @@ Minimum requirement to run this code.
 
 9 - Metamask v7.7.3  
 
+Optional: This project is built using "IntelliJ using 2018.3.6" as an IDE, If you are using intelliJ then just open the project. 
+Download the plugin IntelliJ-Solidity.
 
 ##### **How to install and Run DAPP (Decentralized Application)**
 
