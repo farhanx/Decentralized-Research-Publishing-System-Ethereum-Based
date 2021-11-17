@@ -2,3 +2,5 @@
 *.sol linguist-language=Solidity
 web3j-function-library.js linguist-language=Web3j
 ipfs-function-library.js linguist-language=IPFS
+*.html linguist-detectable=false
+*.js linguist-detectable=false
